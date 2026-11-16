@@ -54,6 +54,14 @@
 - 버튼은 `<button type="button">`, 이동은 `<a>`
 - 탭 UI: `role="tablist"`, `role="tab"`, `aria-selected`, `aria-controls`
 
+## 연락처 링크
+
+- 전화번호·휴대폰·팩스가 아닌 번호(대표전화, 상담전화, 1588 번호 등)는 화면 어디에 있든 **반드시** `<a href="tel:02-1234-5678">02-1234-5678</a>`로 감싼다. 헤더·푸터·오시는 길·카드 속 번호까지 빠짐없이
+- 이메일은 `<a href="mailto:help@example.com">help@example.com</a>`
+- 카카오톡 채널·SNS 주소처럼 이동할 곳이 있는 것도 `<a>`로 둔다 (주소를 모르면 `href="#"`)
+- 글자 모양은 주변 글과 같게 둔다 (`a`는 `color: inherit`). 아이콘만 있는 전화 버튼은 sr-only로 번호를 적는다
+- 사업자등록번호처럼 연결할 곳이 없는 번호는 링크하지 않는다
+
 ## 이미지
 
 - 이미지 자리마다 빠짐없이 `<img>`를 넣는다. **배경 이미지도 CSS `background`가 아니라 `<img>`** (CMS에서 경로만 바꿔 쓰기 위해). 예외: 지도 API 영역, aria-hidden 장식 그래픽
